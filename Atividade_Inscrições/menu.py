@@ -1,9 +1,14 @@
 import os
 
-from util import inscricao, conexao_base, listagem
+from util import inscricao, conexao_base, conexao_base2, conexao_base3, listagem, entrada, saida
 
 lista_inscritos = []
+lista_entrada = []
+lista_saida = []
+
 conexao_base(lista_inscritos)
+conexao_base2(lista_entrada)
+conexao_base3(lista_saida)
 
 while(True):
     os.system('cls')
@@ -24,13 +29,17 @@ while(True):
 
         listagem()
     elif op == '3':
-        print('Entrada')
+        print('Entrar')
+
+        entrada(lista_inscritos)
     elif op == '4':
         print('Saída')
+
+        saida(lista_inscritos)
     elif op == '5':
         print('Obrigado por usar o sistema')
         break
     else:
-        print("opção inválidade")
+        print("opção inválidada")
 
     os.system('pause')
